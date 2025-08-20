@@ -129,8 +129,8 @@ function initContactForm() {
             submitBtn.classList.add('btn-loading');
             submitBtn.innerHTML = 'Enviando...';
             
-            // Simula envio do formulário
-            setTimeout(async () => {
+            // Processa formulário imediatamente
+            try {
                 // Coleta dados do formulário
                 const formData = new FormData(contactForm);
                 const data = {
@@ -143,35 +143,56 @@ function initContactForm() {
                 
                 console.log('📨 Processando formulário:', data);
                 
+                // Validação rápida
+                if (!data.nome || !data.telefone) {
+                    throw new Error('Nome e telefone são obrigatórios');
+                }
+                
                 // Envia direto para WhatsApp
                 const whatsappMessage = formatWhatsAppMessage(data);
                 const whatsappUrl = `https://wa.me/5521990005476?text=${encodeURIComponent(whatsappMessage)}`;
                 
+                console.log('📱 URL do WhatsApp:', whatsappUrl);
+                
                 // Salva backup local
                 FormStorage.save(data);
                 
-                // Abre WhatsApp
-                window.open(whatsappUrl, '_blank');
+                // Tenta diferentes métodos para abrir WhatsApp
+                const opened = tryOpenWhatsApp(whatsappUrl);
                 
-                // 🎯 EVENTO DE CONVERSÃO - FORMULÁRIO ENVIADO
-                Analytics.trackEvent('Lead', 'WhatsApp_Contact', 'Form_Submission');
-                Analytics.trackConversion('form_submit', {
-                    service: data.servico || 'not_specified',
-                    source: 'website_form'
-                });
+                if (opened) {
+                    // 🎯 EVENTO DE CONVERSÃO - FORMULÁRIO ENVIADO
+                    Analytics.trackEvent('Lead', 'WhatsApp_Contact', 'Form_Submission');
+                    Analytics.trackConversion('form_submit', {
+                        service: data.servico || 'not_specified',
+                        source: 'website_form'
+                    });
+                    
+                    // Feedback para o usuário
+                    showNotification('📱 WhatsApp aberto! Complete o envio por lá.', 'success');
+                    
+                    // Reset do formulário após sucesso
+                    setTimeout(() => {
+                        contactForm.reset();
+                    }, 1000);
+                } else {
+                    // Fallback: copia para clipboard
+                    navigator.clipboard.writeText(whatsappMessage).then(() => {
+                        showNotification('📋 Mensagem copiada! Cole no WhatsApp: (21) 99000-5476', 'info');
+                    }).catch(() => {
+                        showNotification('❌ Erro ao abrir WhatsApp. Ligue: (21) 99000-5476', 'error');
+                    });
+                }
                 
-                // Feedback para o usuário
-                showNotification('📱 WhatsApp aberto! Complete o envio por lá.', 'success');
-                
-                // Reset do formulário
-                contactForm.reset();
-                
-                // Restaura botão
+            } catch (error) {
+                console.error('❌ Erro no formulário:', error);
+                showNotification('❌ Erro: ' + error.message, 'error');
+            } finally {
+                // Restaura botão sempre
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('btn-loading');
                 submitBtn.innerHTML = originalText;
-                
-            }, 2000);
+            }
         });
         
         // Validação em tempo real
@@ -595,15 +616,23 @@ function initWhatsApp() {
             e.preventDefault();
             
             const url = `https://wa.me/${whatsappConfig.number}?text=${encodeURIComponent(whatsappConfig.message)}`;
-            window.open(url, '_blank');
+            console.log('📱 Botão flutuante - URL WhatsApp:', url);
             
-            // 🎯 EVENTO DE CONVERSÃO - BOTÃO FLUTUANTE
-            Analytics.trackEvent('Lead', 'WhatsApp_Contact', 'Float_Button');
-            Analytics.trackConversion('whatsapp_click', {
-                source: 'float_button'
-            });
+            // Tenta abrir WhatsApp
+            const opened = tryOpenWhatsApp(url);
             
-            console.log('📱 WhatsApp aberto:', url);
+            if (opened) {
+                // 🎯 EVENTO DE CONVERSÃO - BOTÃO FLUTUANTE
+                Analytics.trackEvent('Lead', 'WhatsApp_Contact', 'Float_Button');
+                Analytics.trackConversion('whatsapp_click', {
+                    source: 'float_button'
+                });
+                
+                showNotification('📱 WhatsApp aberto!', 'success');
+            } else {
+                // Fallback
+                showNotification('📱 Ligue: (21) 99000-5476', 'info');
+            }
         });
         
         // Animação especial a cada 30 segundos
@@ -720,6 +749,48 @@ function formatWhatsAppMessage(formData) {
     message += `\n_Mensagem enviada pelo site do Espaço Labelle_ 💖`;
     
     return message;
+}
+
+// Tenta abrir WhatsApp com diferentes métodos
+function tryOpenWhatsApp(url) {
+    console.log('🔄 Tentando abrir WhatsApp:', url);
+    
+    try {
+        // Método 1: window.open (mais compatível)
+        const newWindow = window.open(url, '_blank');
+        
+        if (newWindow) {
+            console.log('✅ WhatsApp aberto via window.open');
+            return true;
+        }
+        
+        // Método 2: location.href (para mobile)
+        if (isMobileDevice()) {
+            window.location.href = url;
+            console.log('✅ WhatsApp aberto via location.href (mobile)');
+            return true;
+        }
+        
+        // Método 3: criar link temporário e clicar
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        console.log('✅ WhatsApp aberto via link temporário');
+        return true;
+        
+    } catch (error) {
+        console.error('❌ Erro ao abrir WhatsApp:', error);
+        return false;
+    }
+}
+
+// Detecta se é dispositivo móvel
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 // Social Media Integration
