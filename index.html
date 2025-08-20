@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Labelle - Salão de Beleza e Estética</title>
+    <meta name="description" content="Espaço Labelle - Seu espaço de beleza e bem-estar no Rio de Janeiro. Oferecemos serviços de cabelo, estética, manicure e muito mais.">
+    <meta name="keywords" content="salão beleza, estética, cabelo, manicure, sobrancelhas, Campo Grande, MS, maquiagem, nail art">
+    <meta name="author" content="Espaço La Belle CG">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://espacolabellecg.com/">
+    <meta property="og:title" content="Espaço Labelle - Salão de Beleza e Estética">
+    <meta property="og:description" content="Seu espaço de beleza e bem-estar no Rio de Janeiro. Oferecemos serviços de cabelo, estética, manicure e muito mais.">
+    <meta property="og:image" content="https://espacolabelle.com/images/og-image.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Espaço Labelle">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://espacolabellecg.com/">
+    <meta property="twitter:title" content="Espaço Labelle - Salão de Beleza e Estética">
+    <meta property="twitter:description" content="Seu espaço de beleza e bem-estar no Rio de Janeiro. Oferecemos serviços de cabelo, estética, manicure e muito mais.">
+    <meta property="twitter:image" content="https://espacolabellecg.com/images/twitter-image.jpg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ec4899">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Labelle">
+    <!-- Favicons usando a logo real -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/7J2VJ4qb/logo.png">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/7J2VJ4qb/logo.png">
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#ec4899">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- ========================================== -->
+    <!-- 📊 PIXELS DE RASTREAMENTO E ANALYTICS     -->
+    <!-- ========================================== -->
+    <!-- 
+    🎯 COLE AQUI SEUS CÓDIGOS DE RASTREAMENTO:
+    
+    ✅ Google Analytics 4 (GA4):
+    Exemplo:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    ✅ Facebook Pixel:
+    Exemplo:
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'SEU_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    
+    ✅ Google Ads (Conversion Tracking):
+    Exemplo:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-XXXXXXXXX');
+    </script>
+    
+    ✅ Google Tag Manager:
+    Exemplo:
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    
+    ✅ TikTok Pixel:
+    Exemplo:
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+            ttq.load('SEU_PIXEL_ID');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    
+    COLE SEUS CÓDIGOS AQUI ↓
+    -->
+    
+    <!-- 🎯 SEUS PIXELS AQUI - COLE ABAIXO DESTA LINHA -->
+    
+    
+    
+    <!-- 🎯 SEUS PIXELS AQUI - COLE ACIMA DESTA LINHA -->
+    <!-- ========================================== -->
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter">
+    <!-- ========================================== -->
+    <!-- 📊 PIXELS QUE VÃO NO BODY (EX: GTM, FB)   -->
+    <!-- ========================================== -->
+    <!-- 
+    🎯 ALGUNS PIXELS PRECISAM SER COLOCADOS LOGO APÓS A TAG <BODY>:
+    
+    ✅ Google Tag Manager (noscript):
+    Exemplo:
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    ✅ Facebook Pixel (noscript):
+    Exemplo:
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+    
+    COLE SEUS CÓDIGOS AQUI ↓
+    -->
+    
+    <!-- 🎯 SEUS PIXELS BODY AQUI - COLE ABAIXO DESTA LINHA -->
+    
+    
+    
+    <!-- 🎯 SEUS PIXELS BODY AQUI - COLE ACIMA DESTA LINHA -->
+    <!-- ========================================== -->
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <h1 class="font-playfair text-2xl md:text-3xl font-bold text-pink-600">
+                        Espaço Labelle
+                    </h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#inicio" class="nav-link text-gray-700 hover:text-pink-600 transition-colors">Início</a></li>
+                    <li><a href="#servicos" class="nav-link text-gray-700 hover:text-pink-600 transition-colors">Serviços</a></li>
+                    <li><a href="#sobre" class="nav-link text-gray-700 hover:text-pink-600 transition-colors">Sobre</a></li>
+                    <li><a href="#galeria" class="nav-link text-gray-700 hover:text-pink-600 transition-colors">Galeria</a></li>
+                    <li><a href="#contato" class="nav-link text-gray-700 hover:text-pink-600 transition-colors">Contato</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-pink-600" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="#inicio" class="block py-2 px-4 text-gray-700 hover:text-pink-600 transition-colors">Início</a></li>
+                    <li><a href="#servicos" class="block py-2 px-4 text-gray-700 hover:text-pink-600 transition-colors">Serviços</a></li>
+                    <li><a href="#sobre" class="block py-2 px-4 text-gray-700 hover:text-pink-600 transition-colors">Sobre</a></li>
+                    <li><a href="#galeria" class="block py-2 px-4 text-gray-700 hover:text-pink-600 transition-colors">Galeria</a></li>
+                    <li><a href="#contato" class="block py-2 px-4 text-gray-700 hover:text-pink-600 transition-colors">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section min-h-screen flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-600/80 to-purple-600/80"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="font-playfair text-4xl md:text-6xl font-bold text-white mb-6">
+                    Realce sua <span class="text-yellow-400">Beleza Natural</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+                    Descubra o melhor de você no Espaço Labelle. Cuidados especializados em um ambiente acolhedor e sofisticado.
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                    <a href="#servicos" class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-colors">
+                        Nossos Serviços
+                    </a>
+                    <a href="#contato" class="inline-block bg-transparent border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-full font-semibold transition-colors">
+                        Agende Agora
+                    </a>
+                </div>
+                
+                <!-- Redes Sociais no Hero -->
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/espacolabellesmalteria" target="_blank" rel="noopener noreferrer" class="text-white hover:text-pink-300 transition-colors transform hover:scale-110" title="Siga no Instagram">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/espacolabellesmalteria" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-300 transition-colors transform hover:scale-110" title="Curta no Facebook">
+                        <i class="fab fa-facebook text-3xl"></i>
+                    </a>
+                    <a href="https://wa.me/5521990005476" target="_blank" rel="noopener noreferrer" class="text-white hover:text-green-300 transition-colors transform hover:scale-110" title="Fale pelo WhatsApp">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Nossos Serviços</h3>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Oferecemos uma ampla gama de serviços de beleza e estética para realçar sua autoestima
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Serviço 1 -->
+                    <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-cut text-pink-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Cabelo</h4>
+                            <p class="text-gray-600 mb-6">Cortes, coloração, tratamentos capilares, escova e penteados para todas as ocasiões.</p>
+                            <ul class="text-sm text-gray-500 space-y-2">
+                                <li>• Cortes femininos e masculinos</li>
+                                <li>• Coloração e mechas</li>
+                                <li>• Tratamentos capilares</li>
+                                <li>• Escova e penteados</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 2 -->
+                    <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-spa text-pink-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Estética</h4>
+                            <p class="text-gray-600 mb-6">Cuidados faciais e corporais para manter sua pele sempre saudável e radiante.</p>
+                            <ul class="text-sm text-gray-500 space-y-2">
+                                <li>• Limpeza de pele</li>
+                                <li>• Tratamentos faciais</li>
+                                <li>• Massagens relaxantes</li>
+                                <li>• Depilação</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 3 -->
+                    <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-hand-sparkles text-pink-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Manicure & Pedicure</h4>
+                            <p class="text-gray-600 mb-6">Cuidados completos para suas unhas, desde o básico até nail art personalizada.</p>
+                            <ul class="text-sm text-gray-500 space-y-2">
+                                <li>• Manicure tradicional</li>
+                                <li>• Pedicure completo</li>
+                                <li>• Nail art</li>
+                                <li>• Alongamento de unhas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 4 -->
+                    <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-eye text-pink-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Sobrancelhas & Cílios</h4>
+                            <p class="text-gray-600 mb-6">Design perfeito para realçar seu olhar com técnicas modernas e personalizadas.</p>
+                            <ul class="text-sm text-gray-500 space-y-2">
+                                <li>• Design de sobrancelhas</li>
+                                <li>• Micropigmentação</li>
+                                <li>• Extensão de cílios</li>
+                                <li>• Laminação de cílios</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 5 -->
+                    <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-palette text-pink-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Maquiagem</h4>
+                            <p class="text-gray-600 mb-6">Maquiagem profissional para eventos especiais, casamentos e ocasiões únicas.</p>
+                            <ul class="text-sm text-gray-500 space-y-2">
+                                <li>• Maquiagem social</li>
+                                <li>• Maquiagem para noivas</li>
+                                <li>• Maquiagem para festas</li>
+                                <li>• Consultoria em beleza</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 6 -->
+                    <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-gift text-pink-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Pacotes Especiais</h4>
+                            <p class="text-gray-600 mb-6">Pacotes combinados com desconto especial para você economizar e ficar ainda mais bela.</p>
+                            <ul class="text-sm text-gray-500 space-y-2">
+                                <li>• Dia da noiva completo</li>
+                                <li>• Pacote mãe e filha</li>
+                                <li>• Combo relaxamento</li>
+                                <li>• Pacotes mensais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-6">Sobre o Espaço Labelle</h3>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Há mais de 10 anos cuidando da beleza e autoestima das mulheres do Rio de Janeiro, 
+                                o Espaço Labelle é referência em qualidade e atendimento personalizado.
+                            </p>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Nossa equipe é formada por profissionais especializados e apaixonados por beleza, 
+                                sempre atualizados com as últimas tendências e técnicas do mercado.
+                            </p>
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-600 mb-2">10+</div>
+                                    <div class="text-gray-600">Anos de Experiência</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-600 mb-2">5000+</div>
+                                    <div class="text-gray-600">Clientes Satisfeitas</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-600 mb-2">50+</div>
+                                    <div class="text-gray-600">Serviços Oferecidos</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-600 mb-2">100%</div>
+                                    <div class="text-gray-600">Dedicação</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg p-8 text-white">
+                                <h4 class="font-playfair text-2xl font-semibold mb-4">Nossa Missão</h4>
+                                <p class="mb-6">
+                                    Proporcionar uma experiência única de beleza e bem-estar, 
+                                    realçando a autoestima de nossas clientes através de serviços 
+                                    de alta qualidade em um ambiente acolhedor e sofisticado.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                        <span>Profissionais qualificados</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                        <span>Produtos de qualidade superior</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                        <span>Ambiente higienizado e seguro</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                        <span>Atendimento personalizado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Galeria</h3>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Conheça nosso espaço e veja alguns dos nossos trabalhos
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Placeholder para imagens da galeria -->
+                    <div class="gallery-item bg-gradient-to-br from-pink-200 to-purple-200 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-camera text-4xl text-gray-600 mb-2"></i>
+                            <p class="text-gray-600">Ambiente Aconchegante</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-gradient-to-br from-purple-200 to-pink-200 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-cut text-4xl text-gray-600 mb-2"></i>
+                            <p class="text-gray-600">Cortes Modernos</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-gradient-to-br from-yellow-200 to-pink-200 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-spa text-4xl text-gray-600 mb-2"></i>
+                            <p class="text-gray-600">Tratamentos Relaxantes</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-gradient-to-br from-pink-200 to-yellow-200 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-hand-sparkles text-4xl text-gray-600 mb-2"></i>
+                            <p class="text-gray-600">Nail Art</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-gradient-to-br from-purple-200 to-yellow-200 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-palette text-4xl text-gray-600 mb-2"></i>
+                            <p class="text-gray-600">Maquiagem Profissional</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-gradient-to-br from-yellow-200 to-purple-200 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-eye text-4xl text-gray-600 mb-2"></i>
+                            <p class="text-gray-600">Design de Sobrancelhas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h3>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Agende seu horário ou tire suas dúvidas. Estamos aqui para cuidar de você!
+                    </p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Informações de Contato -->
+                        <div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-8">Informações de Contato</h4>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-pink-600"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800 mb-1">Endereço</h5>
+                                        <p class="text-gray-600">
+                                            Estrada Rio São Paulo, 1095<br>
+                                            Campo Grande, Rio de Janeiro - RJ<br>
+                                            CEP: 23087-005
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-phone text-pink-600"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800 mb-1">Telefone</h5>
+                                        <p class="text-gray-600">(21) 99000-5476</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-envelope text-pink-600"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800 mb-1">E-mail</h5>
+                                        <p class="text-gray-600">contato@espacolabelle.com.br</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-clock text-pink-600"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800 mb-1">Horário de Funcionamento</h5>
+                                        <p class="text-gray-600">
+                                            Terça a Sábado: 09h às 19h<br>
+                                            Domingo e Segunda: Fechado
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h5 class="font-semibold text-gray-800 mb-4">Redes Sociais</h5>
+                                <div class="flex space-x-4">
+                                    <a href="https://www.instagram.com/espacolabellesmalteria" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors" title="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/espacolabellesmalteria" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors" title="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://wa.me/5521990005476" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-colors" title="WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Formulário de Contato -->
+                        <div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Agende seu Horário</h4>
+                            
+                            <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+                                <div class="flex items-center">
+                                    <i class="fab fa-whatsapp text-green-600 text-xl mr-3"></i>
+                                    <div>
+                                        <p class="text-green-800 font-medium">Atendimento via WhatsApp</p>
+                                        <p class="text-green-600 text-sm">Preencha os dados e será redirecionado para nosso WhatsApp</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="nome" class="block text-sm font-semibold text-gray-700 mb-2">Nome *</label>
+                                        <input type="text" id="nome" name="nome" required 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors">
+                                    </div>
+                                    <div>
+                                        <label for="telefone" class="block text-sm font-semibold text-gray-700 mb-2">WhatsApp *</label>
+                                        <input type="tel" id="telefone" name="telefone" required 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                                               placeholder="(21) 99999-9999">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">E-mail <span class="text-gray-400 font-normal">(opcional)</span></label>
+                                    <input type="email" id="email" name="email" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                                           placeholder="seu@email.com (opcional)">
+                                </div>
+                                
+                                <div>
+                                    <label for="servico" class="block text-sm font-semibold text-gray-700 mb-2">Serviço de Interesse</label>
+                                    <select id="servico" name="servico" 
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors">
+                                        <option value="">Selecione um serviço</option>
+                                        <option value="cabelo">Cabelo</option>
+                                        <option value="estetica">Estética</option>
+                                        <option value="manicure">Manicure & Pedicure</option>
+                                        <option value="sobrancelhas">Sobrancelhas & Cílios</option>
+                                        <option value="maquiagem">Maquiagem</option>
+                                        <option value="pacotes">Pacotes Especiais</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="mensagem" class="block text-sm font-semibold text-gray-700 mb-2">Mensagem</label>
+                                    <textarea id="mensagem" name="mensagem" rows="5" 
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                                              placeholder="Conte-nos mais sobre o que você precisa..."></textarea>
+                                </div>
+                                
+                                <button type="submit" 
+                                        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors">
+                                    <i class="fab fa-whatsapp mr-2"></i>
+                                    Continuar no WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa Interativo -->
+                <div class="mt-16">
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-8 text-center">📍 Nossa Localização</h4>
+                    
+                    <div class="map-container map-placeholder cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-map-marker-alt text-6xl mb-4"></i>
+                            <h5 class="text-xl font-semibold mb-2">Espaço Labelle</h5>
+                            <p class="text-lg opacity-90 mb-4">Estrada Rio São Paulo, 1095<br>Campo Grande, Rio de Janeiro - RJ</p>
+                            <div class="bg-white bg-opacity-20 rounded-full px-6 py-3 inline-block">
+                                <i class="fas fa-hand-pointer mr-2"></i>
+                                Clique para abrir no seu GPS
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <i class="fas fa-car text-pink-600 text-2xl mb-2"></i>
+                            <h6 class="font-semibold text-gray-800">Estacionamento</h6>
+                            <p class="text-sm text-gray-600">Vagas disponíveis na rua</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <i class="fas fa-bus text-pink-600 text-2xl mb-2"></i>
+                            <h6 class="font-semibold text-gray-800">Transporte Público</h6>
+                            <p class="text-sm text-gray-600">Ponto de ônibus próximo</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <i class="fas fa-wheelchair text-pink-600 text-2xl mb-2"></i>
+                            <h6 class="font-semibold text-gray-800">Acessibilidade</h6>
+                            <p class="text-sm text-gray-600">Acesso para cadeirantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Redes Sociais -->
+        <section class="py-16 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="font-playfair text-3xl font-bold mb-4">💕 Siga-nos nas Redes Sociais</h3>
+                <p class="text-xl mb-8 opacity-90">
+                    Acompanhe nossos trabalhos, dicas de beleza e promoções exclusivas!
+                </p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/espacolabellesmalteria" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-4 bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-4 rounded-full transition-all transform hover:scale-105">
+                        <i class="fab fa-instagram text-3xl"></i>
+                        <div class="text-left">
+                            <div class="font-semibold">Instagram</div>
+                            <div class="text-sm opacity-80">@espacolabellesmalteria</div>
+                        </div>
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/espacolabellesmalteria" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-4 bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-4 rounded-full transition-all transform hover:scale-105">
+                        <i class="fab fa-facebook text-3xl"></i>
+                        <div class="text-left">
+                            <div class="font-semibold">Facebook</div>
+                            <div class="text-sm opacity-80">Espaço Labelle</div>
+                        </div>
+                    </a>
+                    
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5521990005476" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-4 bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-4 rounded-full transition-all transform hover:scale-105">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                        <div class="text-left">
+                            <div class="font-semibold">WhatsApp</div>
+                            <div class="text-sm opacity-80">(21) 99000-5476</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-lg opacity-90">
+                        <i class="fas fa-heart text-yellow-400 mr-2"></i>
+                        Marque suas amigas e compartilhe a beleza!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <div id="whatsapp-float" class="fixed bottom-6 right-6 z-50">
+        <a href="#" id="whatsapp-btn" class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        
+        <!-- Tooltip -->
+        <div class="whatsapp-tooltip absolute bottom-20 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 transform translate-y-2 transition-all duration-300 whitespace-nowrap">
+            Agende seu horário!
+            <div class="absolute -bottom-1 right-4 w-2 h-2 bg-gray-800 transform rotate-45"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-playfair text-2xl font-bold text-pink-400 mb-4">Espaço Labelle</h3>
+                    <p class="text-gray-300 mb-4">
+                        Seu espaço de beleza e bem-estar no Rio de Janeiro. 
+                        Cuidamos de você com carinho e profissionalismo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#servicos" class="hover:text-pink-400 transition-colors">Cabelo</a></li>
+                        <li><a href="#servicos" class="hover:text-pink-400 transition-colors">Estética</a></li>
+                        <li><a href="#servicos" class="hover:text-pink-400 transition-colors">Manicure & Pedicure</a></li>
+                        <li><a href="#servicos" class="hover:text-pink-400 transition-colors">Sobrancelhas & Cílios</a></li>
+                        <li><a href="#servicos" class="hover:text-pink-400 transition-colors">Maquiagem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Estrada Rio São Paulo, 1095 - Campo Grande, RJ</li>
+                        <li><i class="fas fa-phone mr-2"></i>(21) 99000-5476</li>
+                        <li><i class="fas fa-envelope mr-2"></i>contato@espacolabelle.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Espaço Labelle. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/form-handler.js"></script>
+    <script src="js/gallery-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
